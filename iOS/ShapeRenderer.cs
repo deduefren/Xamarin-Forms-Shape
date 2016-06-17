@@ -55,12 +55,25 @@ namespace DrawShape.iOS
 				});
 				break;
 			case ShapeType.Circle:
-				HandleStandardDraw (currentContext, rect, () => currentContext.AddArc (centerX, centerY, radius, startAngle, endAngle, true));
+				HandleStandardDraw (currentContext, rect, () => currentContext.AddArc (centerX, centerY, GetEffectiveRadius(rect), startAngle, endAngle, true));
 				break;
 			case ShapeType.CircleIndicator:
 				HandleStandardDraw (currentContext, rect, () => currentContext.AddArc (centerX, centerY, radius, startAngle, endAngle, true));
 				HandleStandardDraw (currentContext, rect, () => currentContext.AddArc (centerX, centerY, radius, QuarterTurnCounterClockwise, (float)(Math.PI * 2 * (Element.IndicatorPercentage / 100)) + QuarterTurnCounterClockwise, false), Element.StrokeWidth + 3);
 				break;
+			}
+		}
+
+		private float GetEffectiveRadius(RectangleF rect)
+		{
+			if (Element.Radius > 0)
+			{
+				return Element.Radius;
+			}
+			else
+			{
+				//Apply this default if we haven't configured a radius.
+				return (rect.Width / 2) - 10;
 			}
 		}
 

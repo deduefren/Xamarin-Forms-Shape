@@ -68,12 +68,25 @@ namespace DrawShape.Android
 				});
 				break;
 			case ShapeType.Circle:
-				HandleStandardDraw (canvas, p => canvas.DrawCircle (x + this.Width / 2, y + this.Height / 2, (this.Width - 10) / 2, p));
+				HandleStandardDraw (canvas, p => canvas.DrawCircle (x + this.Width / 2, y + this.Height / 2, GetEffectiveRadius(), p));
 				break;
 			case ShapeType.CircleIndicator:
 				HandleStandardDraw (canvas, p => canvas.DrawCircle (x + this.Width / 2, y + this.Height / 2, (this.Width - 10) / 2, p), drawFill: false);
 				HandleStandardDraw (canvas, p => canvas.DrawArc (new RectF (x, y, x + this.Width, y + this.Height), QuarterTurnCounterClockwise, 360 * (ShapeView.IndicatorPercentage / 100), false, p), ShapeView.StrokeWidth + 3, false);
 				break;
+			}
+		}
+
+		private float GetEffectiveRadius()
+		{
+			if (ShapeView.Radius > 0)
+			{
+				return ShapeView.Radius;
+			}
+			else
+			{
+				//Apply this default if we haven't configured a radius.
+				return (this.Width - 10) / 2;
 			}
 		}
 

@@ -17,7 +17,9 @@ namespace DrawShape
 
 		public static readonly BindableProperty PaddingProperty = BindableProperty.Create(nameof(Padding), typeof(Thickness), typeof(ShapeView), default(Thickness));
 
-		public ShapeType ShapeType {
+        public static readonly BindableProperty RadiusProperty = BindableProperty.Create(nameof(Radius), typeof(int), typeof(ShapeView), 0);
+
+        public ShapeType ShapeType {
 			get{ return (ShapeType)GetValue (ShapeTypeProperty); }
 			set{ SetValue (ShapeTypeProperty, value); }
 		}
@@ -55,7 +57,21 @@ namespace DrawShape
 			set{ SetValue (PaddingProperty, value); }
 		}
 
-		public ShapeView ()
+        /// <summary>
+        /// Override the automatic radius for Shape type Circle.
+        /// </summary>
+        public int Radius
+        {
+            get { return (int)GetValue(RadiusProperty); }
+            set
+            {
+                if (ShapeType != ShapeType.Circle)
+                    throw new ArgumentException("Can only specify this property with Circle");
+                SetValue(RadiusProperty, value);
+            }
+        }
+
+        public ShapeView ()
 		{
 		}
 	}

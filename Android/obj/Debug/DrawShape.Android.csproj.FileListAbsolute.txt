@@ -1,0 +1,2 @@
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\Android\obj\Debug\DrawShape.Android.csprojResolveAssemblyReference.cache
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\Android\obj\Debug\DrawShape.Android.dll

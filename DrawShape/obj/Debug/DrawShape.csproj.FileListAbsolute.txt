@@ -1,0 +1,9 @@
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\bin\Debug\Xamarin.Forms.Core.dll
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\bin\Debug\Xamarin.Forms.Core.xml
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\obj\Debug\DrawShape.csprojResolveAssemblyReference.cache
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\obj\Debug\DrawShape.SamplePage.xaml.g.cs
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\obj\Debug\DrawShape.dll
+C:\Desarrollo\xamarin\LibreriasExternas\Xamarin-Forms-Shape\DrawShape\obj\Debug\DrawShape.pdb
